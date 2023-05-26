@@ -20,7 +20,7 @@ char *r_strdup(char *str)
 		z++;
 	}
 	n = malloc(sizeof(char) * z + 1);
-	if (!n)
+	if (n == NULL)
 	{
 		return (NULL);
 	}
@@ -29,6 +29,7 @@ char *r_strdup(char *str)
 		n[s] = str[s];
 	}
 	n[z] = str[z];
+	free(n);
 	return (n);
 }
 

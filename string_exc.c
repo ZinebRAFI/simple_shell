@@ -44,6 +44,7 @@ char **split_s_to_a(char *str, const char *dlmtr)
 		z++;
 	}
 	free(cp);
+	free(arra);
 	return (arra);
 }
 
@@ -120,6 +121,7 @@ void *n_realloc(void *pntr, unsigned int prv_size, unsigned int n_size)
 			nvo[z] = prv[z];
 		free(pntr);
 	}
+	free(nvo);
 	return (nvo);
 }
 

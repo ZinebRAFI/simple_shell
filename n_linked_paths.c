@@ -76,6 +76,6 @@ list_of_path *end_plus_node(list_of_path **tete, char *str)
 
 		tprary->p = n;
 	}
-
+	free(n);
 	return (*tete);
 }
